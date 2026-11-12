@@ -12,8 +12,8 @@ import base64
 from collections.abc import Sequence
 from typing import TypeVar
 
-from mistralai import Mistral
-from mistralai.models import SDKError
+from mistralai.client import Mistral
+from mistralai.client.errors import SDKError
 from pydantic import BaseModel, ValidationError
 
 from apverify.application.ports import ConfidentExtraction, PageImage

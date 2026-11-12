@@ -12,7 +12,7 @@ from pathlib import Path
 import httpx
 from google import genai
 from groq import Groq
-from mistralai import Mistral
+from mistralai.client import Mistral
 
 from apverify.application.observability import NullTracer, Tracer
 from apverify.application.ports import (

@@ -19,7 +19,7 @@ _SAMPLE = Path(__file__).resolve().parents[2] / "samples" / "clean_invoice_01.pd
 
 @pytest.mark.skipif(not os.getenv("MISTRAL_API_KEY"), reason="no MISTRAL_API_KEY in environment")
 def test_mistral_extracts_a_domain_invoice() -> None:
-    from mistralai import Mistral
+    from mistralai.client import Mistral
 
     from apverify.domain.invoice import Invoice
     from apverify.infrastructure.errors import RenderError
